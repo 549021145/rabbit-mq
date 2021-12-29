@@ -22,6 +22,7 @@ public class DirectRabbitConfig {
     }
     
     //Direct交换机 起名：TestDirectExchange
+    @Bean
     DirectExchange testDirectExchange() {
     	return new DirectExchange("TestDirectExchange",true, false);
     }
