@@ -7,6 +7,10 @@ import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * 直连型交换机
+ *
+ */
 @Configuration
 public class DirectRabbitConfig {
 	//队列 起名：TestDirectQueue
@@ -21,7 +25,7 @@ public class DirectRabbitConfig {
         return new Queue("TestDirectQueue",true);
     }
     
-    //Direct交换机 起名：TestDirectExchange
+    //Direct交换机 起名：TestDirectExchange 
     @Bean
     DirectExchange testDirectExchange() {
     	return new DirectExchange("TestDirectExchange",true, false);
